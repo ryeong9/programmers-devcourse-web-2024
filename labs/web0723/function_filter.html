@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function_filter</title>
+    <script>
+      const numbers = [1, 922, 913, 325, 52, 252, 8];
+      const evenNumbers = numbers.filter(function (value) {
+        return value % 2 === 0;
+      });
+
+      console.log(`원래 배열: ${numbers}`);
+      console.log(`짝수만 추출: ${evenNumbers}`);
+    </script>
+  </head>
+  <body></body>
+</html>

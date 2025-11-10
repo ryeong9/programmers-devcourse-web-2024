@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function_min</title>
+    <script>
+      function min(array) {
+        let output = array[0];
+        for (const item of array) {
+          if (output > item) {
+            output = item;
+          }
+        }
+        return output;
+      }
+      const array = [23, 913, 922, 436, 444, 323, 123, 34];
+      console.log(`${array} 중에서`);
+      console.log(`최솟값은 ${min(array)}`);
+    </script>
+  </head>
+  <body></body>
+</html>

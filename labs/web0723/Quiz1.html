@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width='device-width', initial-scale=1.0" />
+    <title>Quiz1</title>
+    <script>
+      const input = Number(prompt("연도를 입력하세요"));
+      if ((input % 4 === 0 && input % 100 !== 0) || input % 400 === 0) {
+        alert("윤년입니다");
+      } else {
+        alert("윤년이 아닙니다");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
