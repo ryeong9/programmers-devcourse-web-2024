@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select</title>
+    <script defer src="select.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <form name="testForm">
+        <fieldset>
+          <ul>
+            <li>
+              <label for="userName">이름</label>
+              <input type="text" id="userName" name="userName" />
+            </li>
+            <li>
+              <label for="class">수업</label>
+              <select name="major" id="major">
+                <option>학과 선택</option>
+                <option value="computer">컴퓨터 공학과</option>
+                <option value="business">경영학과</option>
+                <option value="electronic">전기 공학과</option>
+                <option value="design">산업디자인과</option>
+                <option value="global">글로벌문화콘텐츠 학과</option>
+              </select>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input type="radio" name="subject" value="back" />
+            백엔드
+          </label>
+          <label>
+            <input type="radio" name="subject" value="front" />
+            프론트엔드
+          </label>
+          <label>
+            <input type="radio" name="subject" value="full" />
+            풀스택
+          </label>
+        </fieldset>
+        <fieldset>
+          <label
+            ><input type="checkbox" name="study" value="morning" />아침</label
+          >
+          <label
+            ><input type="checkbox" name="study" value="afternoon" />점심</label
+          >
+          <label
+            ><input type="checkbox" name="study" value="evening" />저녁</label
+          >
+        </fieldset>
+        <button type="button" id="submitBtn">확인</button>
+      </form>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
