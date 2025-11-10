@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#box")
+          .css({
+            width: 100,
+            height: 100,
+            background: "#67B6E0",
+          })
+          .on("click", function () {
+            $(this).css("background", "#53DBDB");
+          })
+          .on("mouseenter", function () {
+            $(this).css("background", "#7179DB");
+          })
+          .on("mouseleave", function () {
+            $(this).css("background", "#4CDB8F");
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>

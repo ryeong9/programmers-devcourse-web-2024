@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#box")
+          .css({
+            width: 100,
+            height: 100,
+            background: "#53DBC1",
+          })
+          .animate(
+            {
+              width: 300,
+              opacity: 0.4,
+            },
+            5000
+          );
+      });
+    </script>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>

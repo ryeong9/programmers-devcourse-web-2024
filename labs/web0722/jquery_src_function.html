@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      //이벤트를 연결
+      $(document).ready(function () {
+        $("img").attr({
+          alt: "jQuery 라이브러리를 사용한 속성 지정",
+          src: function (index) {
+            let size = (index + 1) * 100;
+            return "https://via.placeholder.com/" + size + "x100";
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img />
+    <img />
+    <img />
+    <img src="" alt="" />
+  </body>
+</html>

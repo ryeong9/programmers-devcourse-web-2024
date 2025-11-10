@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      //이벤트를 연결
+      $(document).ready(function () {
+        $(".box").css("width", 100);
+        $(".box").css("height", 100);
+        $(".box").css("margin", 10);
+        $(".box").css("float", "left");
+        $(".box1").css("background", "pink");
+        $(".box2").css("background", "purple");
+        $(".box3").css("background", "orange");
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 이렇게 하면 box/box1 따로 스타일 지정 가능 -->
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </body>
+</html>
