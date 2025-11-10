@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rectangle</title>
+
+    <script>
+      class Rectangle {
+        constructor(width, height) {
+          this.width = width;
+          this.height = height;
+        }
+
+        // 사각형의 둘레를 구하기
+        getPerimeter() {
+          return 2 * (this.width + this.height);
+        }
+
+        // 사각형의 넓이를 구하기
+        getArea() {
+          return this.width * this.height;
+        }
+      }
+
+      const rectangle = new Rectangle(10, 20);
+      console.log(`사각형의 둘레: ${rectangle.getPerimeter()}`);
+      console.log(`사각형의 넓이: ${rectangle.getArea()}`);
+    </script>
+  </head>
+  <body>
+    <input type="text" />
+    <p></p>
+  </body>
+</html>

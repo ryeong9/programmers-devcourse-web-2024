@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <script>
+      // DOMContentLoaded 이벤트가 발생하면 실행될 함수
+      document.addEventListener("DOMContentLoaded", () => {
+        // 할 일 입력 필드와 할 일 목록을 가져옴
+        const input = document.querySelector("#todo");
+        const todoList = document.querySelector("#todo-list");
+        const addButton = document.querySelector("#add-button");
+
+        // 할 일을 구분할 고유한 키 변수 선언
+        let keyCount = 0;
+
+        // 할 일을 추가하는 함수
+        const addTodo = () => {
+          // 입력 필드의 값이 공백이면 경고 후 함수 종료
+          if (input.value.trim() === "") {
+            alert("할 일을 입력해주세요.");
+            return;
+          }
+
+          // 새로운 할 일 아이템을 담을 div 요소 생성
+          const item = document.createElement("div");
+          const checkbox = document.createElement("input"); // 체크박스 생성
+          const text = document.createElement("span"); // 텍스트 표시용 span생성
+          const button = document.createElement("button"); // 삭제 버튼 생성
+
+          // 각 할 일 아이템을 식별할 고유한 키 생성
+          const key = keyCount;
+          keyCount += 1;
+
+          // 할 일 아이템에 고유한 데이터 키 속성 추가
+          item.setAttribute("data-key", key);
+          item.appendChild(checkbox); // 할 일 아이템에 체크박스 추가
+          item.appendChild(text); // 할 일 아이템에 텍스트 추가
+          item.appendChild(button); // 할 일 아이템에 버튼 추가
+          todoList.appendChild(item); // 할 일 목록에 할 일 아이템 추가
+
+          // 체크박스 설정
+          checkbox.type = "checkbox";
+          checkbox.addEventListener("change", (event) => {
+            // 체크박스의 상태에 따라 텍스트의 스타일 변경
+            item.style.textDecoration = event.target.checked
+              ? "line-through"
+              : "";
+          });
+
+          // 텍스트 설정
+          text.textContent = input.value;
+
+          // 삭제 버튼 설정
+          button.textContent = "제거하기";
+          button.addEventListener("click", () => {
+            removeTodo(key);
+          });
+
+          // 입력 필드 비우기
+          input.value = "";
+        };
+
+        // 할 일을 제거하는 함수
+        const removeTodo = (key) => {
+          // 고유 키를 이용하여 해당 할 일 아이템을 찾아서 제거
+          const item = document.querySelector(`[data-key="${key}"]`);
+          todoList.removeChild(item); // 할 일 목록에서 해당 아이템 제거
+        };
+
+        // 추가 버튼 클릭 시 할 일 추가 함수 실행
+        addButton.addEventListener("click", addTodo);
+
+        // 입력 필드에서 Enter 키를 눌렀을 때 할 일 추가 함수 실행
+        input.addEventListener("keyup", (event) => {
+          const ENTER = 13; // Enter 키 코드
+          if (event.keyCode === ENTER) {
+            addTodo(); // 할 일 추가 함수 호출
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>할 일 목록</h1>
+    <input id="todo" />
+    <!-- 할 일 입력을 받는 입력 필드 -->
+    <button id="add-button">추가하기</button>
+    <!-- 할 일 추가 버튼 -->
+    <div id="todo-list"></div>
+    <!-- 할 일 목록을 표시할 영역 -->
+  </body>
+</html>
