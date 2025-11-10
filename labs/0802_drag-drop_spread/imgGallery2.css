@@ -1,0 +1,40 @@
+.wrapper {
+  width: 550px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#container {
+  position: absolute;
+}
+
+#container > img {
+  width: 100%;
+  display: none;
+}
+
+#container > img.active {
+  display: block;
+}
+
+.img {
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+  margin: 5px;
+}
+
+button {
+  position: absolute;
+  height: 100%;
+  background-color: rgb(255, 159, 159);
+  top: 0;
+  color: black;
+  border-radius: 20px;
+}
+
+#prev {
+  left: 0;
+}
+#next {
+  right: -10px;
+}

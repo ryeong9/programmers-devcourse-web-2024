@@ -1,0 +1,17 @@
+#gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.img {
+  width: 300px;
+  height: 200px;
+  border-radius: 0 0 20px 20px;
+  margin: 5px;
+}
+
+.img.dragging {
+  opacity: 0.5;
+}
