@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this</title>
+    <script>
+      const pet = {
+        name: "겨울이",
+        eat: function (food) {
+          alert(this.name + "은/는" + food + "을/를 먹습니다.");
+        },
+      };
+      pet.eat("사료");
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prototype</title>
+    <script>
+      // contain() 메소드 추가
+      String.prototype.contain = function (data) {
+        return this.indexOf(data) >= 0;
+      };
+      Array.prototype.contain = function (data) {
+        return this.indexOf(data) >= 0;
+      };
+
+      // String 객체의 contain 사용
+      const a = "안녕하세요";
+      console.log("안녕 in 안녕하세요:", a.contain("안녕"));
+      console.log("없는데 in 안녕하세요:", a.contain("없는데"));
+
+      // Array 객체의 contain 사용
+      const b = [252, 325, 922, 57, 23];
+      console.log("252 in [252, 325, 922, 57, 23]:", b.contain(252));
+      console.log("0 in [252, 325, 922, 57, 23]:", b.contain(0));
+    </script>
+  </head>
+  <body></body>
+</html>

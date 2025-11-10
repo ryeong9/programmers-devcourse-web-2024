@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>별 찍기 모음</title>
+  </head>
+  <script>
+    // 1번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      document.write("*");
+    }
+    document.write("<hr>");
+    // 2번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      document.write("*");
+      document.write("</br>");
+    }
+    document.write("<hr>");
+    // 3번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5; j++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    document.write("<hr>");
+    // 4번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < i + 1; j++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    document.write("<hr>");
+    //5번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5 - i; j++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    document.write("<hr>");
+    // 6번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      for (let j = 4; j > i; j--) {
+        document.write("&nbsp;");
+      }
+      for (let k = 0; k < i + 1; k++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    document.write("<hr>");
+    // 7번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < i; j++) {
+        document.write("&nbsp;");
+      }
+      for (let k = 5; k > i; k--) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    document.write("<hr>");
+    // 8번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      for (let j = 5; j > i + 1; j--) {
+        document.write("&nbsp;");
+      }
+      for (let k = 0; k < 2 * i + 1; k++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    document.write("<hr>");
+    // 9번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < i; j++) {
+        document.write("&nbsp;");
+      }
+      for (let k = 0; k < 2 * (5 - i) - 1; k++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    document.write("<hr>");
+    // 10번 별 찍기
+    for (let i = 0; i < 5; i++) {
+      for (let j = 5; j > i + 1; j--) {
+        document.write("&nbsp;");
+      }
+      for (let k = 0; k < 2 * i + 1; k++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < i; j++) {
+        document.write("&nbsp;");
+      }
+      for (let k = 0; k < 2 * (5 - i) - 1; k++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    document.write("<hr>");
+  </script>
+  <body></body>
+</html>
